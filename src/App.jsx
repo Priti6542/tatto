@@ -9,7 +9,8 @@ function App() {
     <>
 
 
-      <AppRoutes />
+      <AppRoutes /> 
+      
       
     </>
   )
