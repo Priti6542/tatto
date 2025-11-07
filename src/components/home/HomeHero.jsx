@@ -92,7 +92,7 @@ function HeroSection() {
                         return (
                             <div
                                 key={index}
-                                className={`absolute top-2/3 left-1/2 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'
+                                className={`absolute top-2/2 left-1/2 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'
                                     }`}
                                 style={{
                                     transform: `

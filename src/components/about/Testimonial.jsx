@@ -1,8 +1,8 @@
 import React from "react";
-import img1  from "../../assets/img 1.jpeg";
-import img2  from "../../assets/img 3.jpeg";
-import img3  from "../../assets/img2.jpeg";
-import img4  from "../../assets/img4.jpeg";
+import img1  from "../../assets/img1.jpg";
+import img2  from "../../assets/img2.jpg";
+import img3  from "../../assets/img3.jpg";
+import img4  from "../../assets/img4.jpg";
 
 const artists = [
   {
@@ -55,7 +55,7 @@ const ArtistsSection = () => {
         </div>
 
         {/* Description + Button */}
-        <div className="mt-16 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
+        {/* <div className="mt-16 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-gray-400 text-lg max-w-2xl">
             Our tattoo artists bring diverse skills and years of experience to
             every design. Dedicated to excellence and creativity, they
@@ -65,7 +65,7 @@ const ArtistsSection = () => {
           <button className="border border-gray-400 px-6 py-3 uppercase tracking-widest hover:bg-white hover:text-black transition duration-300">
             Learn More
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -2,15 +2,16 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { FiUser } from "react-icons/fi";
 
 function Navbar() {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  
+
   // Check if we're on home page
   const isHomePage = location.pathname === '/';
-  
+
   // Handle scroll to change navbar background
   useEffect(() => {
     const handleScroll = () => {
@@ -20,84 +21,88 @@ function Navbar() {
         setIsScrolled(false);
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   const isActive = (path) => location.pathname === path;
-  
+
   // Transparent on home page initially, solid black when scrolled or on other pages
   const navClasses = isHomePage && !isScrolled
     ? 'bg-black bg-opacity-80 backdrop-blur-sm'  // ✅ Black with transparency
     : 'bg-black shadow-lg';
-  
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navClasses}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          
+
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <span className="text-2xl font-bold text-white tracking-wider">
               INK STUDIO
             </span>
           </Link>
-          
+
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-8">
             <li>
-              <Link 
-                to="/" 
-                className={`text-white hover:text-gray-300 transition-colors text-sm uppercase tracking-wide ${
-                  isActive('/') ? 'border-b-2 border-white pb-1' : ''
-                }`}
+              <Link
+                to="/"
+                className={`text-white hover:text-gray-300 transition-colors text-sm uppercase tracking-wide ${isActive('/') ? 'border-b-2 border-white pb-1' : ''
+                  }`}
               >
                 Home
               </Link>
             </li>
             <li>
-              <Link 
-                to="/about" 
-                className={`text-white hover:text-gray-300 transition-colors text-sm uppercase tracking-wide ${
-                  isActive('/about') ? 'border-b-2 border-white pb-1' : ''
-                }`}
+              <Link
+                to="/about"
+                className={`text-white hover:text-gray-300 transition-colors text-sm uppercase tracking-wide ${isActive('/about') ? 'border-b-2 border-white pb-1' : ''
+                  }`}
               >
                 About Us
               </Link>
             </li>
             <li>
-              <Link 
-                to="/gallery" 
-                className={`text-white hover:text-gray-300 transition-colors text-sm uppercase tracking-wide ${
-                  isActive('/gallery') ? 'border-b-2 border-white pb-1' : ''
-                }`}
+              <Link
+                to="/gallery"
+                className={`text-white hover:text-gray-300 transition-colors text-sm uppercase tracking-wide ${isActive('/gallery') ? 'border-b-2 border-white pb-1' : ''
+                  }`}
               >
                 Gallery
               </Link>
             </li>
             <li>
-              <Link 
-                to="/contact" 
-                className={`text-white hover:text-gray-300 transition-colors text-sm uppercase tracking-wide ${
-                  isActive('/contact') ? 'border-b-2 border-white pb-1' : ''
-                }`}
+              <Link
+                to="/contact"
+                className={`text-white hover:text-gray-300 transition-colors text-sm uppercase tracking-wide ${isActive('/contact') ? 'border-b-2 border-white pb-1' : ''
+                  }`}
               >
                 Contact
               </Link>
             </li>
           </ul>
-          
+
           {/* Book Appointment Button */}
-          <Link 
-            to="/contact" 
+          {/* <Link
+            to="/contact"
             className="hidden md:block bg-white text-black px-6 py-2 text-sm uppercase tracking-wide font-semibold hover:bg-gray-200 transition-colors"
           >
             Book Now
+          </Link> */}
+          <Link
+            to="/login"
+            className="flex items-center gap-2 bg-black-500 hover:bg-orange-600 text-white font-medium px-7 py-2 rounded-[16px] border border-orange-600 shadow-sm text-lg transition-all duration-200"
+            style={{ boxSizing: "border-box" }}
+          >
+            <FiUser size={22} />
+            <span>Admin Login</span>
           </Link>
-          
+
           {/* Mobile Hamburger */}
-          <button 
+          <button
             className="md:hidden text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -110,58 +115,54 @@ function Navbar() {
             </svg>
           </button>
         </div>
-        
+
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden bg-black border-t border-gray-800">
             <ul className="py-4 space-y-4">
               <li>
-                <Link 
-                  to="/" 
-                  className={`block text-white hover:text-gray-300 text-sm uppercase tracking-wide ${
-                    isActive('/') ? 'font-bold' : ''
-                  }`}
+                <Link
+                  to="/"
+                  className={`block text-white hover:text-gray-300 text-sm uppercase tracking-wide ${isActive('/') ? 'font-bold' : ''
+                    }`}
                   onClick={() => setIsOpen(false)}
                 >
                   Home
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/about" 
-                  className={`block text-white hover:text-gray-300 text-sm uppercase tracking-wide ${
-                    isActive('/about') ? 'font-bold' : ''
-                  }`}
+                <Link
+                  to="/about"
+                  className={`block text-white hover:text-gray-300 text-sm uppercase tracking-wide ${isActive('/about') ? 'font-bold' : ''
+                    }`}
                   onClick={() => setIsOpen(false)}
                 >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/gallery" 
-                  className={`block text-white hover:text-gray-300 text-sm uppercase tracking-wide ${
-                    isActive('/gallery') ? 'font-bold' : ''
-                  }`}
+                <Link
+                  to="/gallery"
+                  className={`block text-white hover:text-gray-300 text-sm uppercase tracking-wide ${isActive('/gallery') ? 'font-bold' : ''
+                    }`}
                   onClick={() => setIsOpen(false)}
                 >
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/contact" 
-                  className={`block text-white hover:text-gray-300 text-sm uppercase tracking-wide ${
-                    isActive('/contact') ? 'font-bold' : ''
-                  }`}
+                <Link
+                  to="/contact"
+                  className={`block text-white hover:text-gray-300 text-sm uppercase tracking-wide ${isActive('/contact') ? 'font-bold' : ''
+                    }`}
                   onClick={() => setIsOpen(false)}
                 >
                   Contact
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/contact" 
+                <Link
+                  to="/contact"
                   className="block bg-white text-black px-6 py-2 text-sm uppercase tracking-wide font-semibold text-center"
                   onClick={() => setIsOpen(false)}
                 >

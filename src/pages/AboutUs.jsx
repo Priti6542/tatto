@@ -2,6 +2,7 @@ import React from 'react'
 import About from '../components/about/AboutHero'
 import TattoArtist from '../components/about/TattoArtist';
 import Testimonial from '../components/about/Testimonial';
+import VisionMission from '../components/about/VisionMission';
  
 
 
@@ -11,6 +12,7 @@ const AboutUs = () => {
       <About/>
       <TattoArtist/>
       <Testimonial/>
+     <VisionMission/>
    
    
       
@@ -21,9 +23,4 @@ const AboutUs = () => {
 
 export default AboutUs;
 
-      <h1>About Us</h1>
-      <p>We are a tattoo studio dedicated to providing the best experience for our clients.</p>
-    </div>
-  )
-}
-export default AboutUs;
+     
