@@ -37,22 +37,22 @@ export default function AuthForm() {
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
-      className="max-w-md mx-auto bg-[#f7fcf7] rounded-2xl shadow-2xl px-8 py-10 mt-14 border border-green-200 mt-50 mb-20"
+      className="max-w-md mx-auto bg-gray-900 rounded-3xl shadow-2xl px-10 py-12 mt-14 border border-orange-600 mb-20 mt-30"
     >
-      <div className="flex justify-center mb-4">
-        <span className="flex items-center bg-green-500 text-white px-5 py-2 rounded-xl text-lg gap-2 shadow font-semibold">
-          <FiUser size={22} />
+      <div className="flex justify-center mb-6">
+        <span className="flex items-center bg-orange-600 text-white px-6 py-3 rounded-xl text-lg gap-3 shadow font-extrabold tracking-wide">
+          <FiUser size={24} />
           Admin Login
         </span>
       </div>
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-8">
         <input
           type="email"
           name="email"
           placeholder="Email"
           value={form.email}
           onChange={handleChange}
-          className="w-full rounded-[14px] border border-green-400 bg-white px-4 py-3 text-green-800 text-base focus:outline-none focus:ring-2 focus:ring-green-300"
+          className="w-full rounded-[14px] border border-orange-600 bg-gray-800 px-5 py-3 text-white placeholder-orange-400 text-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
           required
         />
         <input
@@ -61,15 +61,15 @@ export default function AuthForm() {
           placeholder="Password"
           value={form.password}
           onChange={handleChange}
-          className="w-full rounded-[14px] border border-green-400 bg-white px-4 py-3 text-green-800 text-base focus:outline-none focus:ring-2 focus:ring-green-300"
+          className="w-full rounded-[14px] border border-orange-600 bg-gray-800 px-5 py-3 text-white placeholder-orange-400 text-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
           required
         />
         <button
-          className="w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white text-lg font-medium rounded-[14px] py-3 mt-2 transition-colors duration-200 shadow focus:outline-none focus:ring-2 focus:ring-green-300"
+          className="w-full flex items-center justify-center gap-3 bg-orange-600 hover:bg-orange-700 text-white text-lg font-extrabold rounded-[14px] py-3 mt-4 transition-shadow shadow-orange-500/50 focus:outline-none focus:ring-4 focus:ring-orange-400"
           type="submit"
           disabled={loading}
         >
-          <FiUser size={20} />
+          <FiUser size={22} />
           {loading ? "Logging in..." : "Login"}
         </button>
       </form>

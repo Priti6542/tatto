@@ -76,7 +76,7 @@ const HeroSection = () => {
     <section
       className="relative h-screen bg-cover bg-center text-white flex flex-col justify-center items-start px-10 overflow-hidden"
       style={{
-        backgroundImage: "url('/image/tatto img.jpg')",
+        backgroundImage: "url('/image/tattoimg.jpg')",
         backgroundAttachment: "fixed",
       }}
     >
@@ -84,7 +84,7 @@ const HeroSection = () => {
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/image/tatto img.jpg')",
+          backgroundImage: "url('/image/gallaryback.jpg')",
         }}
         animate={{
           scale: [1, 1.05, 1],

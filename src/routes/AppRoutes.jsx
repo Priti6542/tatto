@@ -9,6 +9,7 @@ import ContactUs from '../pages/ContactUs';
 import AuthForm from '../pages/auth/AuthForm';
 import Dashboard from '../pages/admin/Dashboard';
 import ScrollToTop from '../pages/ScrollTop';
+import ServicesPage from '../pages/ServicesPage';
 
 function AppRoutes() {
   return (
@@ -20,6 +21,7 @@ function AppRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/services" element={<ServicesPage/>} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/login" element={<AuthForm/>} />
           <Route path="admin/dashboard" element={<Dashboard/>} />
