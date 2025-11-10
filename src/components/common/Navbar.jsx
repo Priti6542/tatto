@@ -187,7 +187,7 @@
 //                   Book Now
 //                 </Link> */}
 //               </li>
-              
+
 //             </ul>
 //           </div>
 //         )}
@@ -247,15 +247,16 @@ function Navbar() {
               { to: "/", label: "Home" },
               { to: "/about", label: "About Us" },
               { to: "/gallery", label: "Gallery" },
-              { to: "/services", label: "Podcast" },
+              { to: "/podcast", label: "Podcast" },
+              { to: "/services", label: "Services" },
+
               { to: "/contact", label: "Contact" },
             ].map(({ to, label }) => (
               <li key={to}>
                 <Link
                   to={to}
-                  className={`text-white hover:text-gray-300 transition-colors text-sm uppercase tracking-wide ${
-                    isActive(to) ? "border-b-2 border-white pb-1" : ""
-                  }`}
+                  className={`text-white hover:text-gray-300 transition-colors text-sm uppercase tracking-wide ${isActive(to) ? "border-b-2 border-white pb-1" : ""
+                    }`}
                 >
                   {label}
                 </Link>
@@ -299,7 +300,7 @@ function Navbar() {
                 { to: "/", label: "Home" },
                 { to: "/about", label: "About Us" },
                 { to: "/gallery", label: "Gallery" },
-                { to: "/services", label: "Podcast" },
+                { to: "/services", label: "Services" },
                 { to: "/contact", label: "Contact" },
                 { to: "/login", label: "Admin Login", mobileOnly: true },
               ].map(({ to, label, mobileOnly }) => {
@@ -308,9 +309,8 @@ function Navbar() {
                   <li key={to}>
                     <Link
                       to={to}
-                      className={`block text-white hover:text-gray-300 text-sm uppercase tracking-wide ${
-                        isActive(to) ? "font-bold" : ""
-                      }`}
+                      className={`block text-white hover:text-gray-300 text-sm uppercase tracking-wide ${isActive(to) ? "font-bold" : ""
+                        }`}
                       onClick={() => setIsOpen(false)} // Close menu on click
                     >
                       {label}

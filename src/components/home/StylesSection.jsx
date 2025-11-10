@@ -122,7 +122,7 @@ function StylesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
                 viewport={{ once: true }}
-                className="inline-block"
+                className="inline-block text-orange-800 text-shadow: 0 0 15px rgba(228, 72, 20, 0.8)"
                 whileHover={{
                   textShadow: "0 0 15px rgba(255, 140, 0, 0.8)",
                   scale: 1.15,
