@@ -301,6 +301,7 @@ function Navbar() {
                 { to: "/about", label: "About Us" },
                 { to: "/gallery", label: "Gallery" },
                 { to: "/services", label: "Services" },
+                { to: "/podcast", label: "Podcast" },
                 { to: "/contact", label: "Contact" },
                 { to: "/login", label: "Admin Login", mobileOnly: true },
               ].map(({ to, label, mobileOnly }) => {
