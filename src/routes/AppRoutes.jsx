@@ -7,10 +7,10 @@ import AboutUs from '../pages/AboutUs';
 import Gallery from '../pages/Gallery';
 import ContactUs from '../pages/ContactUs';
 import AuthForm from '../pages/auth/AuthForm';
-import Dashboard from '../pages/admin/Dashboard';
 import ScrollToTop from '../pages/ScrollTop';
 import ServicePage from '../pages/ServicePage'
 import PodcastPage from '../pages/PodcastPage'
+import AdminDashboard from '../pages/admin/AdminDashboard';
 
 function AppRoutes() {
   return (
@@ -26,7 +26,7 @@ function AppRoutes() {
           <Route path="/services" element={<ServicePage/>} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/login" element={<AuthForm/>} />
-          <Route path="admin/dashboard" element={<Dashboard/>} />
+          <Route path="admin/dashboard" element={<AdminDashboard/>} />
         </Routes>
       </main>
       <Footer />
