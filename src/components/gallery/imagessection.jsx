@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const API_URL = "http://localhost:3000";
+// const API_URL = "http://localhost:3000";
+const API_URL = "https://tattobackend.onrender.com";
 
 const ImageSection = () => {
   const [allImages, setAllImages] = useState([]);

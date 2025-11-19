@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-const API_URL = "http://localhost:3000"; // Your backend URL
+// const API_URL = "http://localhost:3000";
+const API_URL = "https://tattobackend.onrender.com";
+
 
 const PodcastSection = () => {
   const [podcasts, setPodcasts] = useState([]);
