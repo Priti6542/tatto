@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 
-const API_URL = "http://localhost:3000";
+// const API_URL = "http://localhost:3000";
+const API_URL = "https://tattobackend.onrender.com";
 
 export default function PodcastDashboard() {
   const [videos, setVideos] = useState([]);
